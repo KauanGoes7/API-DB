@@ -37,9 +37,16 @@ export default function Req() {
                 <ModalInfo data={data.find((char) => char.id === modal)} close={() => setModal(undefined)} />
             )}
 
-            <a href={"/"}>
-                <img src={sair} alt="botao" className={style.sairAPI} style={{ width: "40px", cursor: "pointer" }} />
-            </a>
+             <div style={{ position: "absolute", top: "20px", left: "20px" }}>
+                            <a href={"/"}>
+                                <img 
+                                    src={sair} 
+                                    alt="Voltar para o menu principal" 
+                                    className={style.sairAPI} 
+                                    style={{ width: "40px", cursor: "pointer" }} 
+                                />
+                            </a>
+                        </div>
 
             <br /><br /><br />
             <section className={style.inicio}>
