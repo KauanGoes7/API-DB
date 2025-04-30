@@ -1,0 +1,149 @@
+body {
+    background-color: #212529;
+}
+
+.inicio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.sairAPI {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    z-index: 100;
+}
+
+.sairAPI:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.imagemAPI {
+    width: 47vh;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.imagemAPI:hover {
+    transform: scale(1.05);
+}
+
+.wrapinput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* INPUTS REDUZIDOS */
+.inputAPI {
+    width: 220px;
+    height: 42px;
+    padding: 8px 15px;
+    border-radius: 50px;
+    border: 2px solid #FFD700;
+    background-color: rgba(255, 140, 0, 0.1);
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 13px;
+    text-align: center;
+    transition: all 300ms ease;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+    outline: none;
+}
+
+.inputAPI:hover {
+    transform: scale(1.03);
+    border-color: #FFA500;
+    background-color: rgba(255, 140, 0, 0.2);
+    box-shadow: 0 0 12px rgba(255, 165, 0, 0.5);
+}
+
+.inputAPI:focus {
+    border-color: #FF8C00;
+    background-color: rgba(255, 140, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.7);
+}
+
+.inputAPI::placeholder {
+    color: #FFD700;
+    opacity: 0.7;
+    font-size: 12px;
+}
+
+/* BOTÃO COM TEMA DRAGON BALL */
+.butaoFundo {
+    display: flex;
+    justify-content: center;
+    background-color: #131518;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.butaoFundo button {
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #FF8C00, #FFD700);
+    color: #000;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 300ms ease;
+    box-shadow: 0 3px 12px rgba(255, 140, 0, 0.4);
+    width: 180px;
+}
+
+.butaoFundo button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(145deg, #FFA500, #FFE700);
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.6);
+}
+
+/* CARDS AJUSTADOS */
+.wrapCardsRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.wrapAll1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.9); /* Reduz o tamanho dos cards */
+    transition: transform 0.3s ease;
+}
+
+.wrapAll1:hover {
+    transform: scale(0.95);
+}
+
+/* RESPONSIVO */
+@media (min-width: 1000px) {
+    .inputAPI {
+        width: 240px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .butaoFundo button {
+        width: 200px;
+        font-size: 14px;
+    }
+}

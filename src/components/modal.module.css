@@ -1,0 +1,226 @@
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+@keyframes kiGlow {
+  0% { box-shadow: 0 0 10px #FFD700, 0 0 20px #FF8C00; }
+  50% { box-shadow: 0 0 20px #FFD700, 0 0 30px #FF8C00; }
+  100% { box-shadow: 0 0 10px #FFD700, 0 0 20px #FF8C00; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(5px);
+}
+
+.modalContent {
+  position: relative;
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  border-radius: 16px;
+  width: 85%;
+  max-width: 700px; /* Reduzido de 800px */
+  padding: 25px; /* Reduzido de 30px */
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
+  border: 2px solid #FF8C00;
+  animation: kiGlow 3s infinite;
+  overflow: hidden;
+}
+
+.modalContent::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+  animation: pulse 6s infinite linear;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px; /* Ajustado */
+  right: 12px; /* Ajustado */
+  background: #FF8C00;
+  border: none;
+  border-radius: 50%;
+  width: 36px; /* Reduzido */
+  height: 36px; /* Reduzido */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  transform: rotate(90deg) scale(1.1);
+  background: #FF0000;
+}
+
+.closeButton img {
+  width: 18px; /* Reduzido */
+  height: 18px; /* Reduzido */
+}
+
+.characterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* Reduzido de 30px */
+}
+
+.characterImage {
+  position: relative;
+  width: 240px; /* Reduzido de 280px */
+  height: 320px; /* Reduzido de 380px */
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #FFD700; /* Reduzido de 4px */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Reduzido */
+  animation: float 4s ease-in-out infinite;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.fullBodyImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+}
+
+.kiPulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, transparent 70%);
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.characterInfo {
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.characterName {
+  font-family: 'Dragon Ball', sans-serif;
+  color: #FFD700;
+  font-size: 2.2rem; /* Reduzido de 2.5rem */
+  margin-bottom: 15px; /* Reduzido */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px; /* Reduzido de 20px */
+  margin-top: 15px; /* Reduzido */
+}
+
+.infoItem {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px; /* Reduzido de 15px */
+  border-radius: 8px; /* Reduzido */
+  border-left: 3px solid #FF8C00;
+  transition: all 0.3s ease;
+}
+
+.infoItem:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 140, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.2);
+}
+
+.infoLabel {
+  display: block;
+  font-weight: bold;
+  color: #FF8C00;
+  margin-bottom: 5px;
+  font-size: 0.95rem; /* Ajustado */
+}
+
+.infoValue {
+  font-size: 1.1rem; /* Reduzido de 1.2rem */
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modalContent {
+      width: 90%;
+      padding: 20px;
+  }
+  
+  .characterImage {
+      width: 200px;
+      height: 260px; /* Ajustado */
+  }
+  
+  .infoGrid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+  }
+  
+  .characterName {
+      font-size: 1.9rem; /* Ajustado */
+  }
+}
+
+@media (max-width: 480px) {
+  .modalContent {
+      width: 95%;
+      padding: 15px;
+  }
+  
+  .characterImage {
+      width: 160px;
+      height: 220px;
+  }
+  
+  .characterName {
+      font-size: 1.6rem;
+  }
+  
+  .infoItem {
+      padding: 10px;
+  }
+  
+  .infoLabel {
+      font-size: 0.9rem;
+  }
+  
+  .infoValue {
+      font-size: 1rem;
+  }
+}
