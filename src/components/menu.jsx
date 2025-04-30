@@ -11,8 +11,8 @@ export const Menu = ({ s1, s2 }) => {
                 
                 <div className="navbar-collapse">
                     <div className="navbar-nav ms-auto">
-                        <a href="/requisicao" className="nav-link" target="_blank" rel="noopener noreferrer">
-                            {s1}
+                        <a href="/video-intro" className="nav-link" target="_blank" rel="noopener noreferrer">
+                            Vídeo Intro
                         </a>
                         <a href="/contato" className="nav-link" target="_blank" rel="noopener noreferrer">
                             {s2}

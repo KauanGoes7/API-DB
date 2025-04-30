@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Req from './Req';
-import Contato from './Contato'; // Agora o arquivo existe
+import Contato from './Contato';
+import Video from './Video'; // Alterado para Video.jsx
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/contato",
     element: <Contato />,
+  },
+  {
+    path: "/video-intro",
+    element: <Video />, // Alterado para o componente Video
   }
 ]);
 

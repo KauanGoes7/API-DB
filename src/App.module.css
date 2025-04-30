@@ -174,9 +174,8 @@ body {
   letter-spacing: 1px;
 }
 
-/* Contact Section Styles (ATUALIZADO) */
+/* Contact Section Styles (VERSÃO ORIGINAL) */
 .s2 {
-  background-color: rgba(33, 37, 41, 0.8);
   padding: 100px 20px;
   min-height: 100vh;
   display: flex;
@@ -185,10 +184,6 @@ body {
   justify-content: center;
   color: white;
   text-align: center;
-  position: relative;
-  backdrop-filter: blur(5px);
-  border-top: 1px solid rgba(255, 140, 0, 0.3);
-  border-bottom: 1px solid rgba(255, 140, 0, 0.3);
 }
 
 .s2 h1 {
@@ -196,7 +191,6 @@ body {
   font-family: "Readex Pro", sans-serif;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
 }
 
 .s2 h5 {
@@ -206,78 +200,6 @@ body {
   opacity: 0.86;
   font-weight: 300;
   margin-bottom: 2rem;
-}
-
-.inputS2 {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.inputS2 input {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 12px 20px;
-  border: 2px solid #FF8C00;
-  border-radius: 50px;
-  font-size: 1rem;
-  margin: 10px 0;
-  transition: all 0.3s ease;
-  font-family: "Lexend Deca", sans-serif;
-}
-
-.inputS2 input:focus {
-  outline: none;
-  border-color: #FFD700;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.inputS2 ::placeholder {
-  color: #c2c2c2;
-  font-family: "Lexend Deca", sans-serif;
-}
-
-.mensagemS2 {
-  width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
-}
-
-.mensagemS2 textarea {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 15px;
-  border: 2px solid #FF8C00;
-  border-radius: 20px;
-  font-size: 1rem;
-  min-height: 150px;
-  resize: vertical;
-  transition: all 0.3s ease;
-  font-family: "Lexend Deca", sans-serif;
-}
-
-.mensagemS2 textarea:focus {
-  outline: none;
-  border-color: #FFD700;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.mensagemS2 label {
-  display: block;
-  font-family: "Lexend Deca", sans-serif;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.botoesS2 {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 30px;
 }
 
 .botaoS2 {
@@ -299,20 +221,6 @@ body {
   box-shadow: 0 6px 20px rgba(255, 140, 0, 0.8);
 }
 
-.queroNota {
-  color: white;
-  text-decoration: underline;
-  font-family: "Lexend Deca", sans-serif;
-  font-weight: 200;
-  transition: all 150ms ease-in-out;
-  text-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
-}
-
-.queroNota:hover {
-  font-weight: 400;
-  color: #FFD700;
-}
-
 /* Responsive Styles */
 @media (min-width: 1000px) {
   .s1 {
@@ -327,10 +235,6 @@ body {
     transform: scale(1.3);
   }
 
-  .s2 {
-    padding-bottom: 200px;
-  }
-  
   .s2 h1 {
     font-size: 3.5rem;
   }
@@ -338,15 +242,6 @@ body {
   .s2 h5 {
     font-size: 1.25rem;
     max-width: 600px;
-  }
-
-  .inputS2 input {
-    padding: 15px 25px;
-    font-size: 1.1rem;
-  }
-  
-  .mensagemS2 textarea {
-    font-size: 1.1rem;
   }
   
   .botaoS2 {
