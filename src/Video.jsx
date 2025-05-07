@@ -1,11 +1,22 @@
 import style from "./Video.module.css";
+import sair from "./assets/images/sair.png";
 
 export default function Video() {
   return (
     <div className={style.videoContainer}>
+      <div style={{ position: "absolute", top: "20px", left: "20px" }}>
+        <a href={"/"}>
+          <img 
+            src={sair} 
+            alt="Voltar para o menu principal" 
+            className={style.sairAPI} 
+            style={{ width: "40px", cursor: "pointer" }} 
+          />
+        </a>
+      </div>
+      
       <div className={style.videoHeader}>
         <h1>Dragon Ball - Introdução</h1>
-        <a href="/" className={style.backButton}>← Voltar</a>
       </div>
       
       <div className={style.videoWrapper}>
